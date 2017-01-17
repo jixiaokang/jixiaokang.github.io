@@ -1,0 +1,656 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>python入门基础笔记，基础不牢地动山摇 | 嵇小康的博客just for fun</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="嵇小康">
+    
+
+    
+    <meta name="description" content="我为何要学python呢……大约是因为兴趣，还有就是它简单（对，它相对来说比较简单）。为何会产生如此奇怪的兴趣呢……大约是因为觉得好玩吧。以前的时候觉得哇塞爬虫好酷，看到别人写网站好酷好酷，要是我会写就好了呢；后来上了大学学数学要学一些编程课，一开始学C语言：我擦这是什么玩意！从此扑街了很久。后来忽然又觉得好玩就开始打算看一下python，正打算从爬虫开始起步，正巧又遇到了个机会可以帮忙让这个兴趣">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python入门基础笔记，基础不牢地动山摇">
+<meta property="og:url" content="http://jixiaokang.github.io/2016/01/29/python入门笔记/index.html">
+<meta property="og:site_name" content="嵇小康的博客just for fun">
+<meta property="og:description" content="我为何要学python呢……大约是因为兴趣，还有就是它简单（对，它相对来说比较简单）。为何会产生如此奇怪的兴趣呢……大约是因为觉得好玩吧。以前的时候觉得哇塞爬虫好酷，看到别人写网站好酷好酷，要是我会写就好了呢；后来上了大学学数学要学一些编程课，一开始学C语言：我擦这是什么玩意！从此扑街了很久。后来忽然又觉得好玩就开始打算看一下python，正打算从爬虫开始起步，正巧又遇到了个机会可以帮忙让这个兴趣">
+<meta property="og:image" content="http://ww3.sinaimg.cn/mw1024/70987ae1jw1f0gb1hi8p9j20d106bt8v.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/mw1024/70987ae1jw1f0gccv3t1yj20wy06jt94.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw1024/70987ae1jw1f0gccv8n57j20cr074glp.jpg">
+<meta property="og:updated_time" content="2016-01-29T11:02:53.187Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python入门基础笔记，基础不牢地动山摇">
+<meta name="twitter:description" content="我为何要学python呢……大约是因为兴趣，还有就是它简单（对，它相对来说比较简单）。为何会产生如此奇怪的兴趣呢……大约是因为觉得好玩吧。以前的时候觉得哇塞爬虫好酷，看到别人写网站好酷好酷，要是我会写就好了呢；后来上了大学学数学要学一些编程课，一开始学C语言：我擦这是什么玩意！从此扑街了很久。后来忽然又觉得好玩就开始打算看一下python，正打算从爬虫开始起步，正巧又遇到了个机会可以帮忙让这个兴趣">
+<meta name="twitter:image" content="http://ww3.sinaimg.cn/mw1024/70987ae1jw1f0gb1hi8p9j20d106bt8v.jpg">
+
+    
+    <link rel="alternative" href="/atom.xml" title="嵇小康的博客just for fun" type="application/atom+xml">
+    
+    
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.jpg" alt="嵇小康的博客just for fun" title="嵇小康的博客just for fun"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="嵇小康的博客just for fun">嵇小康的博客just for fun</a></h1>
+				<h2 class="blog-motto">学习新技能是一件愉快的事</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页</a></li>
+					
+						<li><a href="/archives">所有文章</a></li>
+					
+						<li><a href="/about">关于我</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:jixiaokang.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/01/29/python入门笔记/" title="python入门基础笔记，基础不牢地动山摇" itemprop="url">python入门基础笔记，基础不牢地动山摇</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="嵇小康" target="_blank" itemprop="author">嵇小康</a>
+		
+  <p class="article-time">
+    <time datetime="2016-01-29T05:08:00.000Z" itemprop="datePublished"> 发表于 2016-01-29</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<p>我为何要学python呢……大约是因为兴趣，还有就是它简单（对，它相对来说比较简单）。为何会产生如此奇怪的兴趣呢……大约是因为觉得好玩吧。以前的时候觉得哇塞爬虫好酷，看到别人写网站好酷好酷，要是我会写就好了呢；后来上了大学学数学要学一些编程课，一开始学C语言：我擦这是什么玩意！从此扑街了很久。后来忽然又觉得好玩就开始打算看一下python，正打算从爬虫开始起步，正巧又遇到了个机会可以帮忙让这个兴趣可以做点贡献有点用处，于是就这样愉快的开始玩耍了。现在自己真的写起来发现……懂得太少实在难办，毕竟我是一个只学过C啊C++和matlab的渣渣。。。什么HTML啊http啊css啊编码啊前端后端web都不懂，也不太懂网页是怎么建的，也看不懂结构什么的，也不懂数据库，不知道要怎么连接数据库。</p>
+<p>放假了有时间了终于可以玩啦，于是一个一个慢慢来玩吧。感觉这些东西主要是量比较大，需要了解的比较多，但是学起来或许并不是难度很大。但是一堆完全不懂的东西一下子全摆在这里也是很头疼啊。</p>
+<p>这个教程适合什么都不懂的小白来看，简单明了，总结的都是精华。还总结了遇到的bug，天啦这么良心的作者，我真想给她打钱【王婆脸】<br>写博客是最好的学习方式。</p>
+<a id="more"></a>
+<p>以sublime text2为编辑器,代码都是python2。为何学2呢，因为据说2的库比较全……。python3好像对编码进行了一些调整，一些print之类的语句也变了，不过无所谓，编程主要学的是思想，这些都是次要的。</p>
+<p>当然也可以选用cmd直接运行，讲真cmd其实还……挺丑的，也不是彩色的，功能也少一些，写起来麻烦，而且我的cmd显示中文特别的有问题，百度方法都试了依旧会时不时的出现乱码。sublime功能多，对新手来说学习成本高一点，但是会用了之后可以省很多事情。而且缩进呀什么的也挺好用的。python缩进其实真的挺严格的。</p>
+<p>配置环境变量，安装插件什么的都是很久之前的事情了，具体不记得了……按照百度一步步一步步一步步一步步来就好（这里想吐槽一万句）。</p>
+<hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">print</span> <span class="string">'hello word'</span></div></pre></td></tr></table></figure>
+<p><strong>bug1</strong>：运行一定要先把文件保存成.py格式，要不然会出现找不到main函数的错误</p>
+<p><code>ctrl+B</code>运行程序，哇成功第一步</p>
+<p><img src="http://ww3.sinaimg.cn/mw1024/70987ae1jw1f0gb1hi8p9j20d106bt8v.jpg" alt="哇"><br>哎用新浪微博做图床出现水印就这样吧我也是懒懒的。</p>
+<p>Python提供了一个<code>raw_input()</code>，可以让用户输入字符串，并存放到一个变量里。但其实这个函数很有局限。</p>
+<p><code>range()</code>函数，可以生成一个整数序列，比如<code>range(6)</code>生成的序列是从0开始小于6的整数：0 1 2 3 4 5<br><code>range(1, 11)</code>生成[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]。</p>
+<hr>
+<p>####字符串<br>用<code>&#39;&#39;``&quot;&quot;</code>括起来的。必要时需要用到转义字符<code>\</code>。例如I’m OK应该写成<code>&#39;I\&#39;m OK&#39;</code>。<code>\n</code>是换行，多个换行用<code>...</code>实现。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">print</span> <span class="string">'''line1</span></div><div class="line"><span class="meta">... </span>line2</div><div class="line"><span class="meta">... </span>line3'''</div></pre></td></tr></table></figure></p>
+<p>python的语法特别灵活，学习C语言之类时候是不是被各种int啊之类的数据类型搞晕了呢？在python里面不用担心这个，完全可以灵活赋值。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">a = <span class="number">123</span> <span class="comment"># a是整数</span></div><div class="line"><span class="keyword">print</span> a</div><div class="line">a = <span class="string">'ABC'</span> <span class="comment"># a变为字符串</span></div><div class="line"><span class="keyword">print</span> a</div></pre></td></tr></table></figure></p>
+<p>这个时候我们预计得到的正确结果，运行一下，当当当当！！！<br><img src="http://ww3.sinaimg.cn/mw1024/70987ae1jw1f0gccv3t1yj20wy06jt94.jpg" alt="出现了奇怪的错误这是不是逗我"></p>
+<hr>
+<p>#####编码问题<br>下面我们来分析下，恩原来是出现了汉字，蛋疼的编码问题,哪怕把格式转换成UTF-8编码为什么还是出现错误呢。</p>
+<p>于是添加<code># -*- coding: UTF-8 -*-</code><br><img src="http://ww1.sinaimg.cn/mw1024/70987ae1jw1f0gccv8n57j20cr074glp.jpg" alt="正确了"></p>
+<p><strong>bug2</strong> 出现编码错误。【程序中尽量不要使用中文，文件名也尽量不要用中文，这种类似bug总是出现。<code># -*- coding: UTF-8 -*-</code>这行代码是为了告诉Python解释器，按照UTF-8编码读取源代码，否则，你在源代码中写的中文输出可能会有乱码。</p>
+<blockquote>
+<p>现象：最近需要抓取一些网页的信息，但发现Python的乱码问题相对Java来说，不太一样。按照以往Java解决中文乱码问题的思路去解决Python乱码，貌似行不通，报错信息：</p>
+<p>SyntaxError: Non-ASCII character ‘\xe5’ in file</p>
+<p>原因：Python默认是以ASCII作为编码方式的，如果在自己的Python源码中包含了中文（或者其他的语言，比如小日本的日语……），此时即使你把自己编写的Python源文件以UTF-8格式保存了；但实际上，这依然是不行的。</p>
+<p>解决方法：在源码的第一行添加以下语句：</p>
+<p><code># -*- coding: UTF-8 -*-</code>    或者<code>#coding=utf-8</code></p>
+<p>（注：此语句一定要添加在源代码的第一行）</p>
+</blockquote>
+<p>这个问题很头疼啊……这种bug我已经遇到一万遍了，每次都很头疼，很多现在也无法解决。</p>
+<hr>
+<p>####list和tuple</p>
+<p><code>classmates = [&#39;Michael&#39;, &#39;Bob&#39;, &#39;Tracy&#39;]</code></p>
+<p>用len()函数可以获得list元素的个数：<code>len(classmates)</code></p>
+<p>最后一个元素的索引是- 1。<code>classmates[-1]</code>：Tracy</p>
+<p>可以往list中追加元素到末尾：<code>classmates.append(&#39;Adam&#39;)</code>:    [‘Michael’, ‘Bob’, ‘Tracy’, ‘Adam’]</p>
+<p>也可以把元素插入到指定的位置，比如索引号为1的位置：<code>classmates.insert(1, &#39;Jack&#39;)</code>:[‘Michael’, ‘Jack’, ‘Bob’, ‘Tracy’, ‘Adam’]</p>
+<p>用pop()方法删除元素。<code>pop()</code>是删除最后一个元素。<code>pop(i)</code>是删除第i个元素。</p>
+<p>列表里面元素可以不同，也可以包含列表，比如：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">p = [<span class="string">'huge'</span>, <span class="string">'yuanhong'</span>]</div><div class="line">s = [<span class="string">'KKW'</span>, <span class="string">'huojianhua'</span>, p, <span class="string">'jindong'</span>]</div></pre></td></tr></table></figure></p>
+<p>有序列表叫元组：tuple,tuple里面的元素不可以修改。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">classmates = (<span class="string">'Michael'</span>, <span class="string">'Bob'</span>, <span class="string">'Tracy'</span>)</div></pre></td></tr></table></figure></p>
+<p>注意，只有1个元素的tuple定义时必须加一个逗号,<code>t = (1,)</code>来防止歧义。</p>
+<hr>
+<p>####字典</p>
+<p>python里有字典，key-value的数据结构经常会有很大用处。语句：<code>d = {&#39;Michael&#39;: 95, &#39;Bob&#39;: 75, &#39;Tracy&#39;: 85}</code><br>注意是大括号。</p>
+<p>总结：list是[]，字典是{}，tuple是（）。</p>
+<p>把数据放入dict，可直接通过key放入：<code>d[&#39;Adam&#39;] = 67</code>。</p>
+<p>要删除一个key，用pop(key)方法，对应的value也会从dict中删除<code>d.pop(&#39;Bob&#39;)</code></p>
+<hr>
+<p>####IF语句</p>
+<p>if语句<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">a = <span class="number">100</span></div><div class="line"><span class="keyword">if</span> a &gt;= <span class="number">0</span>:</div><div class="line">    <span class="keyword">print</span> a</div><div class="line"><span class="keyword">else</span>:</div><div class="line">    <span class="keyword">print</span> -a</div></pre></td></tr></table></figure></p>
+<p>缩进一般是4个空格，别问为什么，因为大家都是四个。如果if语句判断是True，则执行就把缩进的两行print语句。</p>
+<p>使用<code>elif</code>来实现elseif功能。</p>
+<p>举个形象的例子。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> 胡歌比KKW帅:</div><div class="line">    喜欢他</div><div class="line"><span class="keyword">elif</span> 胡歌比靳东帅:</div><div class="line">    娶他</div><div class="line"><span class="keyword">elif</span> 胡歌比霍建华帅:</div><div class="line">    立刻娶他</div><div class="line"><span class="keyword">else</span>:</div><div class="line">    请你去看眼科谢谢</div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<pre><code>喜欢他
+</code></pre><p><strong>注意冒号</strong></p>
+<blockquote>
+<p>if语句执行有个特点，它是从上往下判断，如果在某个判断上是True，把该判断对应的语句执行后，就忽略掉剩下的elif和else。</p>
+</blockquote>
+<p><strong>注意！！！！</strong></p>
+<h6 id="这样就会出现一些问题，比如我们不确定胡歌到底有多帅的时候，用这种逻辑写循环，就会造成只有第一步的判断运行过去了，也就是说胡歌仅仅是和KKW比较了帅气程度，直接得出了结果，然后程序结束；胡歌还没有运行到第三步即和霍建华比较判断，程序就已经结束了。这根本不科学，不符合实际情况。"><a href="#这样就会出现一些问题，比如我们不确定胡歌到底有多帅的时候，用这种逻辑写循环，就会造成只有第一步的判断运行过去了，也就是说胡歌仅仅是和KKW比较了帅气程度，直接得出了结果，然后程序结束；胡歌还没有运行到第三步即和霍建华比较判断，程序就已经结束了。这根本不科学，不符合实际情况。" class="headerlink" title="这样就会出现一些问题，比如我们不确定胡歌到底有多帅的时候，用这种逻辑写循环，就会造成只有第一步的判断运行过去了，也就是说胡歌仅仅是和KKW比较了帅气程度，直接得出了结果，然后程序结束；胡歌还没有运行到第三步即和霍建华比较判断，程序就已经结束了。这根本不科学，不符合实际情况。"></a>这样就会出现一些问题，比如我们不确定胡歌到底有多帅的时候，用这种逻辑写循环，就会造成只有第一步的判断运行过去了，也就是说胡歌仅仅是和KKW比较了帅气程度，直接得出了结果，然后程序结束；胡歌还没有运行到第三步即和霍建华比较判断，程序就已经结束了。<strong>这根本不科学，不符合实际情况。</strong></h6><h6 id="所以上面程序结果运行出来是喜欢他，而不是我想要的正确结果立刻娶他，这点在写程序中需要特别注意，容易出错。"><a href="#所以上面程序结果运行出来是喜欢他，而不是我想要的正确结果立刻娶他，这点在写程序中需要特别注意，容易出错。" class="headerlink" title="所以上面程序结果运行出来是喜欢他，而不是我想要的正确结果立刻娶他，这点在写程序中需要特别注意，容易出错。"></a>所以上面程序结果运行出来是<code>喜欢他</code>，而不是我想要的正确结果<code>立刻娶他</code>，<strong>这点在写程序中需要特别注意，容易出错。</strong></h6><hr>
+<p>####For循环</p>
+<p>for x in …循环就是把每个元素代入变量x，然后执行缩进块的语句。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">names = [<span class="string">'huge'</span>, <span class="string">'KKW'</span>, <span class="string">'huojianhua'</span>]</div><div class="line"><span class="keyword">for</span> name <span class="keyword">in</span> names:</div><div class="line">    <span class="keyword">print</span> name</div></pre></td></tr></table></figure>
+<p>运行结果是：</p>
+<pre><code>huge
+KKW
+huojianhua
+</code></pre><p>也可以对字典进行迭代：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">d = &#123;<span class="string">'a'</span>: <span class="number">1</span>, <span class="string">'b'</span>: <span class="number">2</span>, <span class="string">'c'</span>: <span class="number">3</span>&#125;</div><div class="line"><span class="keyword">for</span> key <span class="keyword">in</span> d:</div><div class="line">    <span class="keyword">print</span> key</div></pre></td></tr></table></figure>
+<p>运行结果是：</p>
+<pre><code>a
+c
+b
+</code></pre><p>默认情况下，dict迭代的是key。如果要迭代value，可以用<code>for value in d.itervalues()</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">d = &#123;<span class="string">'a'</span>: <span class="number">1</span>, <span class="string">'b'</span>: <span class="number">2</span>, <span class="string">'c'</span>: <span class="number">3</span>&#125;</div><div class="line"></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> d.itervalues():</div><div class="line">	<span class="keyword">print</span> i</div></pre></td></tr></table></figure>
+<p>运行结果是：</p>
+<pre><code>1
+3    
+2
+</code></pre><p>如果要同时迭代key和value，可以用<code>for k, v in d.iteritems()</code></p>
+<p>python里的循环和matlab或者C等等语言的循环略有不同，python更加方便。但是如果想实现C中利用下标循环的效果，可以使用enumerate函数。enumerate函数可以把一个list变成索引-元素对，这样就可以在for循环中同时迭代索引和元素本身<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> i, key <span class="keyword">in</span> enumerate([<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>]):</div><div class="line">	<span class="keyword">print</span> i, key</div></pre></td></tr></table></figure></p>
+<pre><code>0 A
+1 B
+2 C
+</code></pre><hr>
+<p>####While循环<br>while循环，只要条件满足，就不断循环，条件不满足时退出循环。这个和其它差不多。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">sum = <span class="number">0</span></div><div class="line">n = <span class="number">99</span></div><div class="line"><span class="keyword">while</span> n &gt; <span class="number">0</span>:</div><div class="line">    sum = sum + n</div><div class="line">    n = n - <span class="number">2</span></div><div class="line"><span class="keyword">print</span> sum</div></pre></td></tr></table></figure></p>
+<hr>
+<p>####函数</p>
+<p>定义一个函数要使用def语句，依次写出函数名、括号、括号中的参数和冒号<code>:</code>，然后，在缩进块中编写函数体，函数的返回值用return语句返回。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">my_abs</span><span class="params">(x)</span>:</span></div><div class="line">    <span class="keyword">if</span> x &gt;= <span class="number">0</span>:</div><div class="line">        <span class="keyword">return</span> x</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">return</span> -x</div></pre></td></tr></table></figure>
+<p>如果想定义一个什么事也不做的空函数，可以用pass语句来占位置。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">shayebugan</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">pass</span></div></pre></td></tr></table></figure></p>
+<p>函数可以同时返回多个值，但其实就是一个tuple。在语法上，返回一个tuple可以省略括号，而多个变量可以同时接收一个tuple，按位置赋给对应的值，所以，Python的函数返回多值其实就是返回一个tuple，但写起来更方便。</p>
+<hr>
+<p>####切片</p>
+<p>这个功能用于简化循环。<br>比如0~99这100个数字，<code>L = range(100)</code>，取前5个，写作<code>L[:5]</code>，得到0 1 2 3 4 。<br>tuple也可以切片，唯一区别是tuple不可变。因此，操作的结果仍是tuple。<br>或者可以直接简写<code>(0, 1, 2, 3, 4, 5)[:3]</code>，结果也是0 1 2 </p>
+<hr>
+<p>####列表生成式<br>如果要生成[1x1, 2x2, 3x3, …, 10x10]，一个方法是写个循环，这样做有点麻烦。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">L = []</div><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">11</span>):</div><div class="line">	L.append(x*x)</div><div class="line"><span class="keyword">print</span> L</div></pre></td></tr></table></figure></p>
+<p>运行结果:</p>
+<pre><code>[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+</code></pre><p>另外我们可以用列表生成式来做：<code>[x * x for x in range(1, 11)]</code><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">L = []</div><div class="line">L = [x * x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">11</span>)]</div><div class="line"><span class="keyword">print</span> L</div></pre></td></tr></table></figure></p>
+<pre><code>[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+</code></pre><p>得到相同结果。</p>
+<blockquote>
+<p>写列表生成式时，把要生成的元素x * x放到前面，后面跟for循环，就可以把list创建出来，十分有用，多写几次，很快就可以熟悉这种语法。</p>
+</blockquote>
+<p>python很多东西都可以通过一行算法实现，很简洁。比如<br><code>[x * x for x in range(1, 11) if x % 2 == 0]</code>筛选出仅偶数的平方[4, 16, 36, 64, 100].</p>
+<p><code>[m + n for m in &#39;ABC&#39; for n in &#39;XYZ&#39;]</code>使用两层循环，可以生成全排列[‘AX’, ‘AY’, ‘AZ’, ‘BX’, ‘BY’, ‘BZ’, ‘CX’, ‘CY’, ‘CZ’]。</p>
+<hr>
+<p>####生成器<br>生成器（Generator）一边循环一边计算，可以省去大量被浪费的空间。比如可以用列表生成器来创建generator。<code>g = (x * x for x in range(10))</code>，运行得到结果<generator object="" <genexpr=""> at 0x02609918&gt;。可以调用<code>next()</code>来逐个输出g的值。generator保存的是算法，每次调用next()，就计算出下一个元素的值，直到计算到最后一个元素，没有更多的元素时，抛出StopIteration的错误。generator也是可以进行迭代的对象，于是可以直接用for来做。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> n <span class="keyword">in</span> g:</div><div class="line">	<span class="keyword">print</span> n</div></pre></td></tr></table></figure></generator></p>
+<p>运行结果：</p>
+<pre><code>1
+4
+9
+16
+25
+36
+49
+64
+81
+</code></pre><p>廖雪峰博客给出了一个生成菲波那切数列的例子，不得不说，python比C语言的实现要简单多啦。（题外话，那天偶然看见知乎上说什么去投行还是哪里的工作面试中出过这个题，让用一种语言来实现，我也是惊呆了……为何经济金融类的岗位要考这种基础算法题= =）</p>
+<p>用函数方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib</span><span class="params">(max)</span>:</span></div><div class="line">    n, a, b = <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span></div><div class="line">    <span class="keyword">while</span> n &lt; max:</div><div class="line">        <span class="keyword">print</span> b</div><div class="line">        a, b = b, a + b</div><div class="line">        n = n + <span class="number">1</span></div></pre></td></tr></table></figure>
+<p>用generator方法：</p>
+<p>要把fib函数变成generator，只需要把<code>print b</code>改为<code>yield b</code>就可以了.如果一个函数定义中包含<code>yield</code>关键字，那么这个函数就不再是一个普通函数，而是一个generator。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib</span><span class="params">(max)</span>:</span></div><div class="line">    n, a, b = <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span></div><div class="line">    <span class="keyword">while</span> n &lt; max:</div><div class="line">        <span class="keyword">yield</span> b</div><div class="line">        a, b = b, a + b</div><div class="line">        n = n + <span class="number">1</span></div></pre></td></tr></table></figure>
+<p>注意：函数是每次顺序执行，遇到return返回</p>
+<p>而generator，在每次调用next()的时候执行，遇到yield语句返回，再次执行时从上次返回的yield语句处继续执行。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">odd</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">print</span> <span class="string">'step 1'</span></div><div class="line">    <span class="keyword">yield</span> <span class="number">1</span></div><div class="line">    <span class="keyword">print</span> <span class="string">'step 2'</span></div><div class="line">    <span class="keyword">yield</span> <span class="number">3</span></div><div class="line">    <span class="keyword">print</span> <span class="string">'step 3'</span></div><div class="line">    <span class="keyword">yield</span> <span class="number">5</span></div><div class="line"></div><div class="line"></div><div class="line">o=odd()</div><div class="line"></div><div class="line"><span class="keyword">print</span> o.next(),o.next(),o.next()</div></pre></td></tr></table></figure></p>
+<p>运行结果：</p>
+<pre><code>step 1 1 
+step 2 3 
+step 3 5
+</code></pre>  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/技术/">技术</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/python/">python</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://jixiaokang.github.io/2016/01/29/python入门笔记/" data-title="python入门基础笔记，基础不牢地动山摇 | 嵇小康的博客just for fun" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/02/19/琅琊榜涂鸦三张/" title="琅琊榜涂鸦三张">
+  <strong>上一篇：</strong><br/>
+  <span>
+  琅琊榜涂鸦三张</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2015/12/14/苏哥哥走了飞流会难过/"  title="苏哥哥走了飞流会难过">
+ <strong>下一篇：</strong><br/> 
+ <span>苏哥哥走了飞流会难过
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2016/01/29/python入门笔记/" data-title="python入门基础笔记，基础不牢地动山摇" data-url="http://jixiaokang.github.io/2016/01/29/python入门笔记/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#这样就会出现一些问题，比如我们不确定胡歌到底有多帅的时候，用这种逻辑写循环，就会造成只有第一步的判断运行过去了，也就是说胡歌仅仅是和KKW比较了帅气程度，直接得出了结果，然后程序结束；胡歌还没有运行到第三步即和霍建华比较判断，程序就已经结束了。这根本不科学，不符合实际情况。"><span class="toc-number">1.</span> <span class="toc-text">这样就会出现一些问题，比如我们不确定胡歌到底有多帅的时候，用这种逻辑写循环，就会造成只有第一步的判断运行过去了，也就是说胡歌仅仅是和KKW比较了帅气程度，直接得出了结果，然后程序结束；胡歌还没有运行到第三步即和霍建华比较判断，程序就已经结束了。这根本不科学，不符合实际情况。</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#所以上面程序结果运行出来是喜欢他，而不是我想要的正确结果立刻娶他，这点在写程序中需要特别注意，容易出错。"><span class="toc-number">2.</span> <span class="toc-text">所以上面程序结果运行出来是喜欢他，而不是我想要的正确结果立刻娶他，这点在写程序中需要特别注意，容易出错。</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/小说/" title="小说">小说<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/我的画/" title="我的画">我的画<sup>5</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/技术/" title="技术">技术<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/诗词/" title="诗词">诗词<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/读书/" title="读书">读书<sup>17</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/随笔/" title="随笔">随笔<sup>9</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/书摘/" title="书摘">书摘<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/画画/" title="画画">画画<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/随笔/" title="随笔">随笔<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/python/" title="python">python<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/诗词/" title="诗词">诗词<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/哲学/" title="哲学">哲学<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/实习/" title="实习">实习<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/SQL/" title="SQL">SQL<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/markdown/" title="markdown">markdown<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/stata/" title="stata">stata<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/无用装逼/" title="无用装逼">无用装逼<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/电脑/" title="电脑">电脑<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/游记/" title="游记">游记<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/沈谢/" title="沈谢">沈谢<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://wwj718.github.io/" target="_blank" title="种瓜的博客">种瓜的博客</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://lxder.github.io/" target="_blank" title="流了个火的博客">流了个火的博客</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+  <div class="tagcloudlist">
+    <p class="asidetitle">标签云</p>
+    <div class="tagcloudlist clearfix">
+       <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/python/" style="font-size: 12.5px;">python</a> <a href="/tags/stata/" style="font-size: 10px;">stata</a> <a href="/tags/书摘/" style="font-size: 20px;">书摘</a> <a href="/tags/哲学/" style="font-size: 12.5px;">哲学</a> <a href="/tags/实习/" style="font-size: 12.5px;">实习</a> <a href="/tags/无用装逼/" style="font-size: 10px;">无用装逼</a> <a href="/tags/沈谢/" style="font-size: 10px;">沈谢</a> <a href="/tags/游记/" style="font-size: 10px;">游记</a> <a href="/tags/电脑/" style="font-size: 10px;">电脑</a> <a href="/tags/画画/" style="font-size: 17.5px;">画画</a> <a href="/tags/诗词/" style="font-size: 12.5px;">诗词</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
+    </div>
+  </div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,this is my blog . <br/>
+			you should apply with high hopes and a willingness to push your boundaries.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/http://weibo.com/beimingyuren e.g. wuchong1014 or 2176287895 for http://weibo.com/2176287895" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:jixiaokang1992@126.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2017 
+		
+		<a href="/about" target="_blank" title="嵇小康">嵇小康</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"jixiaokang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff9732aea83cf364278f4a1a0447a6c94' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
