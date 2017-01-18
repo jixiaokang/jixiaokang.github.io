@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://jixiaokang.github.io/"/>
-  <updated>2017-01-17T17:33:56.040Z</updated>
+  <updated>2017-01-18T10:58:51.439Z</updated>
   <id>http://jixiaokang.github.io/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo博客换电脑之后配置</title>
+    <link href="http://jixiaokang.github.io/2017/01/18/hexo%E5%8D%9A%E5%AE%A2%E6%8D%A2%E7%94%B5%E8%84%91%E4%B9%8B%E5%90%8E%E9%85%8D%E7%BD%AE/"/>
+    <id>http://jixiaokang.github.io/2017/01/18/hexo博客换电脑之后配置/</id>
+    <published>2017-01-18T09:37:49.000Z</published>
+    <updated>2017-01-18T10:58:51.439Z</updated>
+    
+    <content type="html"><![CDATA[<p>换了电脑，原来搭建在旧电脑上的静态博客怎么办呢。最近遇到了这个问题，也去网上搜了一些教程，但是什么方法都有，比较乱，看到很多人也有这个疑问，就写篇博客方便后来人。<br>如果旧电脑还能开机，或者已经把原来博客的文件夹复制出来了的话，最简单的迁移博客的办法如下：</p>
+<a id="more"></a>
+<p>step1:安装node.js<br>step2：安装git for windows<br>step3：配置git，配置环境变量，输入账号密码,并生成新的ssh<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;HuGen&quot;</div><div class="line">git config --global user.email &quot;LoveHuGen@126q.com&quot;</div><div class="line">ssh-keygen -t rsa -C &quot;LoveHuGen@126q.com&quot;</div></pre></td></tr></table></figure></p>
+<p>step4:将生成的ssh公钥复制到github的settings里面的ssh选项里去<br>step5：安装hexo，<code>npm install hexo-cli -g</code><br>step6：将原来电脑的文件夹复制到新电脑,只需复制<code>_config.yml</code>，<code>theme/</code>，<code>source/</code>，<code>scaffolds/</code>，<code>package.json</code>，<code>.gitignore</code>即可<br>step7:直接<code>git bush</code>运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure></p>
+<p>step8:安装插件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save //hexo d部署到git插件</div><div class="line">npm install hexo-generator-feed --save  //RSS订阅插件</div><div class="line">npm install hexo-generator-sitemap --save //站点地图插件</div></pre></td></tr></table></figure></p>
+<p>接下来直接<code>hexo g</code> <code>hexo d</code>试一下是否成功。<br>博客迁移完成。</p>
+<hr>
+<p>发现了一个很好用的sublime text3的markdow插件：markdownediting</p>
+<p>快捷键如下：<br><code>ctr1+1</code> 一级标题<br>……<br><code>ctrl+6</code> 六级标题</p>
+<p><strong>aaaaaaaa</strong><code>alt+b</code></p>
+<p><em>aaaaaaa</em><code>alt+i</code></p>
+<p><img src="" alt=""> <code>shift+win+k</code> 插入图</p>
+<p>[][]</p>
+<p><code>ctrl+win+r</code>创建剪切板内容为参考链接</p>
+<p><a href="https://github.com/SublimeText-Markdown/MarkdownEditing" target="_blank" rel="external">markdownediting github主页</a><br><code>ctrl+win+v</code> 创建剪切板内容为链接</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;换了电脑，原来搭建在旧电脑上的静态博客怎么办呢。最近遇到了这个问题，也去网上搜了一些教程，但是什么方法都有，比较乱，看到很多人也有这个疑问，就写篇博客方便后来人。&lt;br&gt;如果旧电脑还能开机，或者已经把原来博客的文件夹复制出来了的话，最简单的迁移博客的办法如下：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://jixiaokang.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="markdown" scheme="http://jixiaokang.github.io/tags/markdown/"/>
+    
+  </entry>
   
   <entry>
     <title>博客终于迁移过来了</title>
@@ -881,69 +918,6 @@
     </summary>
     
       <category term="小说" scheme="http://jixiaokang.github.io/categories/%E5%B0%8F%E8%AF%B4/"/>
-    
-    
-      <category term="书摘" scheme="http://jixiaokang.github.io/tags/%E4%B9%A6%E6%91%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《我读书少，你可别骗我》</title>
-    <link href="http://jixiaokang.github.io/2016/02/19/%E3%80%8A%E6%88%91%E8%AF%BB%E4%B9%A6%E5%B0%91%EF%BC%8C%E4%BD%A0%E5%8F%AF%E5%88%AB%E9%AA%97%E6%88%91%E3%80%8B/"/>
-    <id>http://jixiaokang.github.io/2016/02/19/《我读书少，你可别骗我》/</id>
-    <published>2016-02-19T12:45:34.000Z</published>
-    <updated>2016-02-19T12:55:54.362Z</updated>
-    
-    <content type="html"><![CDATA[<p>很欢乐的一本书，烧书这个故事最喜欢了<br><a id="more"></a></p>
-<blockquote>
-<p>刘挖挖一脸严肃：“这可不是乱讲的。大众车标是上V下W，加到一起就是威武二字，古代公堂上衙役们喊的，一镇奸恶之徒，二镇阴祟之鬼，可不是信手胡画的。”</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>得出来的结论。可是邵雪城摇摇头，转头问徐聪：“你喜欢哈耶克吗？赞成托洛茨基吗？何新的观点，你都拥护吗？</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>“不，你们都被书名迷惑了。《金瓶梅词话》是金瓶梅最早流传的版本，里面有大量诗词歌赋韵文，也有大量自然主义描写，保留了最原始的风貌；而《绘图真本金瓶梅》则是清朝人进行删节以后推出的新版本，才是真正的第一洁本。设计者显然是望文生义，看到‘词话’，以为只是诗集，看到‘绘图真本’，就以为是春宫插图，所以把分数设置颠倒了——也就是说，设计者在古典文化方面很无知。”</p>
-<p>这些教材早早灭绝的好，以免让新世纪的人类知道旧社会还有iTunes这种惨无人道的东西。我们大概猜到她投反对票的原因了。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>徐聪拿着一本书走过来：“正找你呢，乔布斯传算成功学吗？” 　　“算吧。”我迟疑了一下。 　　“不算，这算什么成功学！这是大毒草。”田骁一口否定。刘月一听不乐意了：“都世界末日了，还搞什么！我认为这就是成功学，乔布斯的成功，是不可否认的。”田骁脖子一梗：“我是安卓用户。”</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>《盗墓笔记》，这个烧不烧？” 　　“八我还没看呢。”我说。 　　“那前七卷呢？先扔火里？” 　　“留着吧，八出来得太晚，我前头都忘得差不多了，有时间重新看一遍。”我把那一套放回去，去找其他书。这时徐茄走到我的身旁，轻声说道：“其实我可以教你一个选择的诀窍。” 　　“哦？” 　　“凡是腰封上宣称全球销量仅次于《圣经》的，都可以搬出来烧掉，不会错的。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>“余秋雨的书，烧不烧？” 　　“烧了吧！”“烧！”“应该易燃吧？”大家七嘴八舌地说。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>现在闹出这么大的灾，大师一定会痛心疾首，他一痛心疾首，就一定会写出精彩的《文化苦旅》来，不差这一本。再说了……”他手腕一翻，亮出封皮，“这本名字也不大吉利，早点烧了也好。”我们凑过去一看，《霜冷长河》，都点头说快烧了吧。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>这种感觉，就像很多人制造一个真正孩子一样，过程往往才是最享受的，生出来的孩子只是意外</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>所以胡思乱想的时间，不是在书桌或电脑前，而是在等候地铁、堵车或者坐在马桶上便秘时。当一个人陷入空虚无聊的时候，就是幻想的最好时机。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>曾经有人问过，你总能想出稀奇古怪的主意，都是怎么琢磨出来的。我的回答是：这些东西不是琢磨出来的，它们是些傲娇的野猫，当你试图靠近的时候，这些家伙会藏在灌木丛里不现身；你去作别的事情，它们反倒慢慢溜出来蹭你的裤管。</p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;很欢乐的一本书，烧书这个故事最喜欢了&lt;br&gt;
-    
-    </summary>
-    
-      <category term="读书" scheme="http://jixiaokang.github.io/categories/%E8%AF%BB%E4%B9%A6/"/>
     
     
       <category term="书摘" scheme="http://jixiaokang.github.io/tags/%E4%B9%A6%E6%91%98/"/>
