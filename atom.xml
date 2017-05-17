@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jixiaokang.github.io/"/>
-  <updated>2017-04-26T16:36:07.293Z</updated>
+  <updated>2017-05-17T06:49:49.875Z</updated>
   <id>https://jixiaokang.github.io/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>stata批量修改变量名</title>
+    <link href="https://jixiaokang.github.io/2017/05/17/stata%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E5%8F%98%E9%87%8F%E5%90%8D/"/>
+    <id>https://jixiaokang.github.io/2017/05/17/stata批量修改变量名/</id>
+    <published>2017-05-17T06:49:49.000Z</published>
+    <updated>2017-05-17T06:49:49.875Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<p>把某一行数据的内容变成某个变量或全部变量的标签label<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">labone,nrow(1) //把第一行作为变量标签</div><div class="line">labone,nrow(1 2) //把第一、二行作为变量标签</div><div class="line">labone,nrow(1 2) concat(/) //把第一、二行作为变量标签，其中这两行之间用/连接</div></pre></td></tr></table></figure></p>
+<p>把某一行变为变量名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">nrow //把第一行作为变量名，且把原来的第一行删除</div><div class="line">nrow,keep//把第一行作为变量名，并保留原来的第一行</div><div class="line"></div><div class="line">nrow, varlist(A B) keep //把第一行作为变量A、B的名称，且保留原来的第一行</div><div class="line"></div><div class="line">nrow 2,varlist(C ) keep //把第二行作为变量C的名称，且保留原来的第二行</div></pre></td></tr></table></figure></p>
+<p><a href="http://chuansong.me/n/1507732052920" target="_blank" rel="external">小命令大用途之——labone和nrow</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;把某一行数据的内容变成某个变量或全部变量的标签label&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;
+    
+    </summary>
+    
+      <category term="技术" scheme="https://jixiaokang.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="stata" scheme="https://jixiaokang.github.io/tags/stata/"/>
+    
+  </entry>
   
   <entry>
     <title>《历史的教训》</title>
@@ -782,43 +809,6 @@
     
     
       <category term="stata" scheme="https://jixiaokang.github.io/tags/stata/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《把时间当朋友》书摘</title>
-    <link href="https://jixiaokang.github.io/2016/07/18/%E3%80%8A%E6%8A%8A%E6%97%B6%E9%97%B4%E5%BD%93%E6%9C%8B%E5%8F%8B%E3%80%8B%E4%B9%A6%E6%91%98/"/>
-    <id>https://jixiaokang.github.io/2016/07/18/《把时间当朋友》书摘/</id>
-    <published>2016-07-18T13:30:37.000Z</published>
-    <updated>2016-07-18T13:38:21.781Z</updated>
-    
-    <content type="html"><![CDATA[<ol>
-<li><p>著名的心理学家维克托·弗兰克。他的父母、妻子、兄弟都死于纳粹魔掌，而他本人则在纳粹集中营里受到严刑拷打。有一天，他赤身独处于囚室之中，突然有了一种全新的感受——他突然想明白，“即使是在极端恶劣的环境里，人们也会拥有一种最后的自由，那就是选择自己的态度的自由。”</p>
-</li>
-<li><p>人们总是搞错顺序，并对错误毫不知晓。尽管并不是绝对，但确实大多数事情都需要熟能生巧。做得多了，自然就擅长了；擅长了，就自然做得比别人好；做得比别人好，兴趣就大起来了，而后就更喜欢做、更擅长，更……良性循环。但，同样，做得多就需要大量的时间投入。没兴趣，往往只不过是结果而已，却被当作不去做好的理由，最终的惩罚就是大量的时间白白流逝。</p>
-</li>
-</ol>
-<a id="more"></a>
-<ol>
-<li>人们总说他们真正感兴趣的是别的事情。可事实上，那应该仅仅是因为他们还没开始做那件事情，所以还没有在那件事情上遭受挫折而已。因为还没有遇到过挫折，还没有证明那件事情他们做不好，所以，那件事儿对他们来讲确实具备很大的吸引力。事实上，当很多人真的放弃原来做的事情，然后去做新的、所谓真正感兴趣的事情的时候，他们最终会发现，这件事想要做好同样困难重重，挫折不断。没有多久，这些人又会因为做不好这件事而失去兴趣，然后开始幻想做另外的事情，并且将其行为“合理化”而后如此声明：“我（才知道）自己真正感兴趣的并不是这个……”（心理学上有个专门的概念，把这种做法称为“Rationalization”。）</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;著名的心理学家维克托·弗兰克。他的父母、妻子、兄弟都死于纳粹魔掌，而他本人则在纳粹集中营里受到严刑拷打。有一天，他赤身独处于囚室之中，突然有了一种全新的感受——他突然想明白，“即使是在极端恶劣的环境里，人们也会拥有一种最后的自由，那就是选择自己的态度的自由。”&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;人们总是搞错顺序，并对错误毫不知晓。尽管并不是绝对，但确实大多数事情都需要熟能生巧。做得多了，自然就擅长了；擅长了，就自然做得比别人好；做得比别人好，兴趣就大起来了，而后就更喜欢做、更擅长，更……良性循环。但，同样，做得多就需要大量的时间投入。没兴趣，往往只不过是结果而已，却被当作不去做好的理由，最终的惩罚就是大量的时间白白流逝。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="读书" scheme="https://jixiaokang.github.io/categories/%E8%AF%BB%E4%B9%A6/"/>
-    
-    
-      <category term="书摘" scheme="https://jixiaokang.github.io/tags/%E4%B9%A6%E6%91%98/"/>
     
   </entry>
   
