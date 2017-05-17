@@ -86,19 +86,16 @@
 
 
 
-<meta name="description" content="把某一行数据的内容变成某个变量或全部变量的标签label123labone,nrow(1) //把第一行作为变量标签labone,nrow(1 2) //把第一、二行作为变量标签labone,nrow(1 2) concat(/) //把第一、二行作为变量标签，其中这两行之间用/连接
-把某一行变为变量名123456nrow //把第一行作为变量名，且把原来的第一行删除nrow,keep//把第一">
+<meta name="description" content="导入csv文件变量的标签label1insheet using XXX.csv">
 <meta property="og:type" content="article">
 <meta property="og:title" content="stata批量修改变量名">
 <meta property="og:url" content="https://jixiaokang.github.io/2017/05/17/stata批量修改变量名/index.html">
 <meta property="og:site_name" content="嵇小康的博客just for fun">
-<meta property="og:description" content="把某一行数据的内容变成某个变量或全部变量的标签label123labone,nrow(1) //把第一行作为变量标签labone,nrow(1 2) //把第一、二行作为变量标签labone,nrow(1 2) concat(/) //把第一、二行作为变量标签，其中这两行之间用/连接
-把某一行变为变量名123456nrow //把第一行作为变量名，且把原来的第一行删除nrow,keep//把第一">
-<meta property="og:updated_time" content="2017-05-17T06:49:49.875Z">
+<meta property="og:description" content="导入csv文件变量的标签label1insheet using XXX.csv">
+<meta property="og:updated_time" content="2017-05-17T13:50:21.058Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="stata批量修改变量名">
-<meta name="twitter:description" content="把某一行数据的内容变成某个变量或全部变量的标签label123labone,nrow(1) //把第一行作为变量标签labone,nrow(1 2) //把第一、二行作为变量标签labone,nrow(1 2) concat(/) //把第一、二行作为变量标签，其中这两行之间用/连接
-把某一行变为变量名123456nrow //把第一行作为变量名，且把原来的第一行删除nrow,keep//把第一">
+<meta name="twitter:description" content="导入csv文件变量的标签label1insheet using XXX.csv">
 
 
 
@@ -393,9 +390,11 @@
       
 
       
-        <a id="more"></a>
+        <p>导入csv文件<br>变量的标签label<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">insheet using XXX.csv</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>把某一行数据的内容变成某个变量或全部变量的标签label<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">labone,nrow(1) //把第一行作为变量标签</div><div class="line">labone,nrow(1 2) //把第一、二行作为变量标签</div><div class="line">labone,nrow(1 2) concat(/) //把第一、二行作为变量标签，其中这两行之间用/连接</div></pre></td></tr></table></figure></p>
 <p>把某一行变为变量名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">nrow //把第一行作为变量名，且把原来的第一行删除</div><div class="line">nrow,keep//把第一行作为变量名，并保留原来的第一行</div><div class="line"></div><div class="line">nrow, varlist(A B) keep //把第一行作为变量A、B的名称，且保留原来的第一行</div><div class="line"></div><div class="line">nrow 2,varlist(C ) keep //把第二行作为变量C的名称，且保留原来的第二行</div></pre></td></tr></table></figure></p>
+<p>把字符串变为数字<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">destring XXX,replace</div></pre></td></tr></table></figure></p>
 <p><a href="http://chuansong.me/n/1507732052920" target="_blank" rel="external">小命令大用途之——labone和nrow</a></p>
 
       
